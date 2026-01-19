@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Apple AirPods Pro 3 with MagSafe Charging Case",
+    "brand": "Apple",
+    "category": "Earbuds",
+    "price": 25900,
+    "mrp": 28900,
+    "discount": 10,
+    "image": "/img/airpods4.png",
+    "rating": 4.7
+  },
+  {
+    "id": 2,
+    "name": "Apple AirPods 4 Active Noise Cancellation",
+    "brand": "Apple",
+    "category": "Earbuds",
+    "price": 16590,
+    "mrp": 17990,
+    "discount": 8,
+    "image": "/img/airpods4.png",
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-CH520 Bluetooth Headphone",
+    "brand": "Sony",
+    "category": "Headphones",
+    "price": 3299,
+    "mrp": 5990,
+    "discount": 45,
+    "image": "/img/sony.png",
+    "rating": 4.4
+  },
+  {
+    "id": 4,
+    "name": "boAt Rockerz 255 Pro+ Neckband",
+    "brand": "Boat",
+    "category": "Neckbands",
+    "price": 1299,
+    "mrp": 3499,
+    "discount": 63,
+    "image": "/img/boat.png",
+    "rating": 4.2
+  },
+  {
+    "id": 5,
+    "name": "JBL Tune 230NC TWS Earbuds",
+    "brand": "JBL",
+    "category": "Earbuds",
+    "price": 3999,
+    "mrp": 6999,
+    "discount": 42,
+    "image": "/img/JBL.png",
+    "rating": 4.3
+  }
+]
