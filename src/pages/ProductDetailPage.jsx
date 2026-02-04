@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { loadProduct, PRODUCT_URL } from "../services/ProductService";
 import '../style/ProductDetailsPage.css';
+import { useCart } from "../components/Context/CartProvider";
 
 export default function ProductDetailPage() {
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
   const { productId } = useParams();
+  const {cartItems,addToCart,removeFromCart,updateCart} =useCart();
 
   useEffect(() => {
     loadProduct(productId).then(res => {
@@ -16,17 +18,12 @@ export default function ProductDetailPage() {
   }, [productId])
 
   const handleAddToCart = () => {
-    const cartItem = {
-      id: product.id,
+    addToCart({
+      id:product.id,
       name: product.name,
       price: product.price,
-      image: selectedImage,
-      quantity: 1
-    };
-
-    console.log("Added to cart:", cartItem);
-
-    // Later we will connect this to Context API
+      image: selectedImage
+    })
   };
 
   if (!product) return <p>Loading...</p>;
