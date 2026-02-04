@@ -6,7 +6,7 @@ import ProductGrid from "./ProductGrid";
 import FiltersPanel from "./FiltersPanel";
 import Breadcrumbs from "./Breadcrumbs";
 import CategorySidebar from "./CategorySidebar";
-import '../components/styles/CategoryPage.css'
+import '../style/categoryPage.css'
 export default function CategoryPage() {
   const [products, setProducts] = useState(productsData);
 
