@@ -3,8 +3,10 @@ import '../style/Header.css';
 import { useCart } from "./Context/CartProvider";
 import CartDrawer from "./Cart/CartDrawer";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+    const navigate=useNavigate();
     const {cartItems}=useCart();
     const [openCart, setOpenCart] = useState(false);
     const totalItems=cartItems?.reduce((sum,item)=>sum+item.quantity,0);
@@ -22,7 +24,7 @@ export default function Header() {
                     <FaMapMarkerAlt />
                     <span>Select Location</span>
                 </div>
-                <button className="login-btn">Login / Sign Up</button>
+                <button className="login-btn" onClick={()=>navigate('/login')}>Login / Sign Up</button>
 
                 <div className="cart" onClick={()=>setOpenCart(true)}>
                     <FaShoppingCart />

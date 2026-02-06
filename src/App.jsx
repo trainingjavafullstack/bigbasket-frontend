@@ -6,17 +6,20 @@ import CategoryPage from './components/CategoryPage'
 import Home from './pages/Home'
 import { BrowserRouter } from "react-router-dom";
 import CartProvider from './components/Context/CartProvider'
+import AuthProvider from './components/Context/AuthProvider'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <AuthProvider>
       <CartProvider>
         <BrowserRouter>
           <Home />
         </BrowserRouter>
       </CartProvider>
+      </AuthProvider>
 
       {/* <div>
         <a href="https://vite.dev" target="_blank">
